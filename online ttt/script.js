@@ -1,12 +1,13 @@
 // Configuración de Firebase (DEMO - Reemplaza con tu configuración real)
 const firebaseConfig = {
-    apiKey: "AIzaSyBq4lLQ7V9V4Q3QwJ2QwNqNvN4Q8Q9Q0Q0",
-    authDomain: "tic-tac-toe-online-demo.firebaseapp.com",
-    databaseURL: "https://tic-tac-toe-online-demo-default-rtdb.firebaseio.com",
-    projectId: "tic-tac-toe-online-demo",
-    storageBucket: "tic-tac-toe-online-demo.appspot.com",
-    messagingSenderId: "123456789012",
-    appId: "1:123456789012:web:abcdef123456789012"
+    apiKey: "AIzaSyA-Eo5_VgkQD8kH0xjLBknZqAIlldmi3eg",
+    authDomain: "mi-tic-tac-toe.firebaseapp.com",
+    databaseURL: "https://mi-tic-tac-toe-default-rtdb.firebaseio.com",
+    projectId: "mi-tic-tac-toe",
+    storageBucket: "mi-tic-tac-toe.firebasestorage.app",
+    messagingSenderId: "659292872370",
+    appId: "1:659292872370:web:79f62d4643ed196926f3ab",
+    measurementId: "G-KBW64PGZ1B"
 };
 
 // Mock Database para demostración (reemplazar con Firebase real)
