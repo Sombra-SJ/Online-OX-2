@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe Online</title>
+    <link rel="stylesheet" href="ttt4.css">
+</head>
+<body>
+    <!-- Panel de Conexión -->
+    <div id="connection-panel" class="connection-panel">
+        <h2>🎮 Tic Tac Toe Online</h2>
+        <div class="connection-options">
+            <div class="option">
+                <h3>Crear Sala</h3>
+                <button id="create-room">Crear Nueva Sala</button>
+            </div>
+            <div class="option">
+                <h3>Unirse a Sala</h3>
+                <input type="text" id="room-code" placeholder="Código de sala (ej: ABC123)" maxlength="6">
+                <button id="join-room">Unirse</button>
+            </div>
+        </div>
+        <div id="connection-status"></div>
+    </div>
+
+    <!-- Panel de Sala -->
+    <div id="room-panel" class="room-panel" style="display: none;">
+        <div class="room-info">
+            <h3>Sala: <span id="current-room"></span></h3>
+            <div id="players-status"></div>
+            <button id="leave-room">Salir de la Sala</button>
+        </div>
+    </div>
+
+    <!-- Contador de Victorias -->
+    <div class="score-panel" style="display: none;" id="score-panel">
+        <h3>Marcador</h3>
+        <div class="score">
+            <span class="player-x">X: <span id="score-x">0</span></span>
+            <span class="player-o">O: <span id="score-o">0</span></span>
+        </div>
+        <div class="games-played">Partidas: <span id="games-count">0</span></div>
+    </div>
+
+    <!-- Panel de Reglas -->
+    <div class="rules-panel" style="display: none;" id="rules-panel">
+        <h3>Reglas Online</h3>
+        <div class="rules-list">
+            <div class="rule">🌐 <strong>Multijugador:</strong> Juega en tiempo real</div>
+            <div class="rule">⚡ <strong>Blitz:</strong> 20 segundos por turno</div>
+            <div class="rule">💬 <strong>Chat:</strong> Envía mensajes durante el juego</div>
+            <div class="rule">🔄 <strong>Reconexión:</strong> Automática si se desconecta</div>
+        </div>
+    </div>
+
+    <h1 style="display: none;" id="game-title">Tic Tac Toe Online</h1>
+    
+    <!-- Indicador de Turno -->
+    <div class="turn-indicator" style="display: none;" id="turn-indicator">
+        Turno de: <span id="current-turn" class="player-x">X</span>
+        <div class="timer-bar">
+            <div id="timer-fill"></div>
+        </div>
+        <span id="timer-text">20s</span>
+    </div>
+
+    <!-- Chat -->
+    <div class="chat-panel" style="display: none;" id="chat-panel">
+        <div class="chat-messages" id="chat-messages"></div>
+        <div class="chat-input">
+            <input type="text" id="chat-input" placeholder="Escribe un mensaje..." maxlength="100">
+            <button id="send-chat">Enviar</button>
+        </div>
+    </div>
+
+    <div class="board" style="display: none;" id="game-board">
+        <div class="cell" data-index="0"></div>
+        <div class="cell" data-index="1"></div>
+        <div class="cell" data-index="2"></div>
+        <div class="cell" data-index="3"></div>
+        <div class="cell" data-index="4"></div>
+        <div class="cell" data-index="5"></div>
+        <div class="cell" data-index="6"></div>
+        <div class="cell" data-index="7"></div>
+        <div class="cell" data-index="8"></div>
+    </div>
+
+    <div class="controls" style="display: none;" id="game-controls">
+        <button id="reset">Nueva Partida</button>
+        <button id="surrender">Rendirse</button>
+    </div>
+
+    <!-- Scripts de Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-database-compat.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
